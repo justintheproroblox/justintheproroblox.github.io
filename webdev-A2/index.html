@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadences</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+
+<body>
+    <header>
+        <h1>Cadences</h1>
+    </header>
+    <nav> <!--menu system-->
+        <!--hamburger icon for mobile-->
+        <button id="hamIcon">Open Menu</button>
+        <ul>
+            <li><button id="page1btn">What is a cadence?</button></li>
+            <li><button id="page2btn">Types of cadences</button></li>
+            <li><button id="page3btn">Sub Topic 3</button></li>
+        </ul>
+    </nav>
+    <main id="pagecontainer">
+        <section class="page" id="page1">
+            <p>A cadence is the ending of a phrase in music.</p>
+            <p>It is similar to a full stop, comma or an exclamation mark at the end of a sentence.</p>
+            <button id="leftBtn">Left</button>
+            <button id="rightBtn">Right</button>
+            <button id="upBtn">Up</button>
+            <button id="downBtn">Down</button>
+            <button id="resetBtn">Reset</button>
+            <div id="ball">Ball</div>
+        </section>
+        <section class="page" id="page2">
+            <ul>
+                <li>Perfect cadence</li>
+                <p>A perfect cadence ends from a chord V to a chord I.</p>
+                <li>Imperfect cadence</li>
+                <p> An imperfect cadence can either end from a chord I to a chord V, a chord II to a chord V, or a chord
+                    IV to a chord V.</p>
+                <li>Interrupted cadence</li>
+                <p>An interrupted cadence ends from a chord V to a chord VI. This changes the key from a major to a
+                    minor.</p>
+                <li>Plagal cadence</li>
+                <p>A plagal cadence ends from a chord IV to a chord I.</p>
+            </ul>
+
+            <fieldset>
+                <legend>1. What does a perfect cadence end with?</legend>
+                <input type="radio" name="q1" value="ChordVIToI"> Chord VI-Chord I
+                <input type="radio" name="q1" value="ChordVToI"> Chord V-Chord I
+                <input type="radio" name="q1" value="ChordIToV"> Chord I-Chord V
+                <input type="radio" name="q1" value="ChordIIToV"> Chord II-Chord V
+            </fieldset>
+            <fieldset>
+                <legend>2. Which of these is a primary color?</legend>
+                <input type="radio" name="q2" value="Cyan"> Cyan
+                <input type="radio" name="q2" value="Orange"> Orange
+                <input type="radio" name="q2" value="Purple"> Purple
+                <input type="radio" name="q2" value="Red"> Red
+            </fieldset>
+            <button id="btnSubmit">Submit Quiz</button>
+            <h3 id="scorebox">Not submitted</h3>
+        
+        </section>
+        <section class="page" id="page3">
+            page 3 content
+        </section>
+    </main>
+</body>
