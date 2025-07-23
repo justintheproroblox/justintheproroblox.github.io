@@ -42,7 +42,12 @@ nav ul li {
     nav ul {
         display: none;
     }
+
+    #page2 {
+        height: 1400px;
+    }
 }
+   
 
 /*to unhide menu items*/
 .menuShow {
