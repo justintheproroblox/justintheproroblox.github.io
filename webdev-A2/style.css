@@ -1,8 +1,31 @@
+body {
+    background-image: url("images/music-background.jpg");
+    background-size: cover;
+}
+
+h1{
+    color:#ff0000fe;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+@keyframes pianoAnimation {
+    0% {rotate:0}
+    25% {rotate:90deg}
+    50% {rotate:180deg}
+    75% {rotate:270deg}
+    100% {rotate:360deg}
+}
+
+#pianoimg {
+    animation: pianoAnimation 2s infinite;
+}
+
+
 .page {
     width: 80vw;
     height: 80vh;
-    border: 1px solid red;
     font-size: 20px;
+    color: white;
 }
 
 nav ul li {
@@ -10,20 +33,134 @@ nav ul li {
 }
 
 #page1 {
-    background: red;;
-    color:white
+    background-color: #024a11;
+    border: 5PX solid #25c748;
+    font-family: Verdana, Tahoma, sans-serif;
 }
 
+#cButton {
+    background-color: #ff0000;
+    color: white;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#cButton:hover {
+    background-color: #ff4d4d;
+    color: black;
+}
+
+#cSharpButton {
+    background-color: #ff3c00;
+    color: white;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#cSharpButton:hover {
+    background-color: #ff7f00;
+    color: black;
+}
+
+#dButton {
+    background-color: #ff8c00;
+    color: white;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#dButton:hover {
+    background-color: #ffb84d;
+    color: black;
+}
+
+#dSharpButton {
+    background-color: #ffb300;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#dSharpButton:hover {
+    background-color: #ffe680;
+    color: black;
+}
+
+#eButton {
+    background-color: #ffff00;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#eButton:hover {
+    background-color: #ffff4d;
+    color: black;
+}
+#fButton {
+    background-color: #00ff1a;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#fButton:hover {
+    background-color: #4dff80;
+    color: black;
+}
 #page2 {
-    background: green
+    color: yellow;
+    background-color: #11085e;
+    border: 5px solid #5949e9;
+    font-family:Verdana, Tahoma, sans-serif;
+    height: 800px;
 }
 
 #page3 {
-    background: blue
+    background-color: #3c0505;
+    color: cyan;
+    border: 5px solid #e9b949;
+    font-family: Verdana, Tahoma, sans-serif;
 }
 
 #hamIcon {
     display: none;
+}
+
+#page1btn {
+    background-color: yellow;
+    transition: width 0.5s;
+    width: 150px;
+    height: 50px;
+}
+#page1btn:hover{
+    width: 200px;
+}
+#page2btn {
+   background-color: aquamarine;
+   transition: width 0.5s;
+    width: 150px;
+    height: 50px;
+}
+#page2btn:hover {
+    width: 200px;
+}
+#page3btn {
+    background-color: rgb(1, 255, 77);
+    transition: width 0.5s;
+    width: 300px;
+    height: 50px;
+}
+#page3btn:hover {
+    width: 350px;
 }
 
 @media (max-width:800px) {
@@ -44,7 +181,17 @@ nav ul li {
     }
 
     #page2 {
-        height: 1400px;
+        height: 1200px;
+    }
+    #page3 {
+        height: 1200px;
+    }
+    #page3btn {
+        width: 150px;
+        height: 50px;
+    }
+    #page3btn:hover {
+        width: 200px;
     }
 }
    
@@ -63,4 +210,10 @@ nav ul li {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
 }

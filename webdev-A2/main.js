@@ -47,49 +47,47 @@ function toggleMenus() {
     }
 }
 
-/*find references to all the buttons and ball */
-const leftBtn = document.querySelector("#leftBtn");
-const rightBtn = document.querySelector("#rightBtn");
-const upBtn = document.querySelector("#upBtn");
-const downBtn = document.querySelector("#downBtn");
-const resetBtn = document.querySelector("#resetBtn");
-const ball = document.querySelector("#ball");
-var ballX = ballY = 0; //assign initial position of ball
-function ResetPos() {
-    ballX = ballY = 0; //reset to zero
-    ball.style.left = ballX + "px"; //set left property to ball x variable
-    ball.style.top = ballY + "px"; //set top property to ball x variable
-    ball.innerText = ballX + "," + ballY; //update ball text to show coordinate
-}
-function MovePos(leftInc, topInc) {
-    ballX = ballX + leftInc;
-    ballY = ballY + topInc;
-    ball.style.left = ballX + "px"; //set left css property to ball x variable
-    ball.style.top = ballY + "px"; //set top css property to ball y variable
-    ball.innerText = ballX + "," + ballY; //update ball text to show coordinate
-}
 
 
-function MoveLeft() {
-    ballX = ballX - 10; //decrement by 10
-    ballY = ballY + 0; //no change
-    ball.style.left = ballX + "px"; //set left css property to ball x variable
-    ball.style.top = ballY + "px"; //set top css property to ball y variable
-    ball.innerText = ballX + "," + ballY; //update ball text to show coordinate
+const cButton = document.querySelector("#cButton");
+const cSound = new Audio("audio/cnote.mp3");
+const cSharpButton = document.querySelector("#cSharpButton");
+const cSharpSound = new Audio("audio/piano-c_CSharp_major.wav")
+const dButton = document.querySelector("#dButton");
+const dSound = new Audio("audio/piano-d_D_major.wav")
+const dSharpButton = document.querySelector("#dSharpButton");
+const dSharpSound = new Audio("audio/piano-eb_DSharp_major.wav")
+const eButton = document.querySelector("#eButton");
+const eSound = new Audio("audio/piano-e_E_major.wav")
+const fButton = document.querySelector("#fButton");
+const fSound = new Audio("audio/piano-f.mp3");
+
+
+function playCNote() {
+    cSound.play();
 }
-//eventlistener to activate MoveLeft (named callback function)
-leftBtn.addEventListener("click", MoveLeft); //no brackets after MoveLeft
-//eventListener to anonymous callback function (other way)
-rightBtn.addEventListener("click", function () {
-    MovePos(10, 0);
-});
-upBtn.addEventListener("click", function () {
-    MovePos(0, -10);
-});
-downBtn.addEventListener("click", function () {
-    MovePos(0, 10);
-});
-resetBtn.addEventListener("click", ResetPos);
+function playCSharpNote() {
+    cSharpSound.play();
+}
+function playDNote() {
+    dSound.play();
+}
+function playDSharpNote() {
+    dSharpSound.play();
+}
+function playENote() {
+    eSound.play();
+}
+function playFNote() {
+    fSound.play();
+}
+
+cButton.addEventListener("click", playCNote);
+cSharpButton.addEventListener("click", playCSharpNote);
+dButton.addEventListener("click", playDNote)
+dSharpButton.addEventListener("click", playDSharpNote);
+eButton.addEventListener("click", playENote);
+fButton.addEventListener("click", playFNote);
 
 
 const btnSubmit = document.querySelector("#btnSubmit");
@@ -97,28 +95,23 @@ btnSubmit.addEventListener("click", CheckAns);
 const scorebox = document.querySelector("#scorebox");
 var q1, q2, score = 0;
 function CheckAns() {
-    score = 0; //reset score to 0, check ans and give score if correct
-    //read the value of the selected radio button for q1
-    //     q1 = document.querySelector("input[name='q1']:checked").value;
-    //     console.log(q1); //check q1 value retrieved
-    //     if (q1 == "Tokyo") score++;
-    //     //read the value of the selected radio button for q2
-    //     q2 = document.querySelector("input[name='q2']:checked").value;
-    //     console.log(q2); //check q2 value retrieved
-    //     if (q2 == "Red") score++;
-    //     scorebox.innerHTML = "Score:" + score;
-    ansArray = ["ChordVToI", "Red"];
+    score = 0; //reset score to 0
+    ansArray = ["ChordVToI", "ChordVToVI", "Plagal"]; //correct answers for the quiz
     for (i = 0; i < ansArray.length; i++) {
         CheckOneAns(i + 1, ansArray[i]);
-    }
-    scorebox.innerHTML = "Score:" + score;
+    }  //loop through the answers and check them
+    scorebox.innerHTML = "Score: "  + score;
 
 }
 
-function CheckOneAns(qNo, CorrAns) {
+function CheckOneAns(qNo, CorrAns) { //function to check one answer
     cssSel = `input[name='q${qNo}']:checked`;
     qTemp = document.querySelector(cssSel).value;
     console.log(qTemp);
     if (qTemp == CorrAns) score++;
 }
+
+
+
+
 
