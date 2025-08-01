@@ -193,6 +193,9 @@ nav ul li {
     #page3btn:hover {
         width: 200px;
     }
+    #qrCodeImg {
+        display: none;
+    }
 }
    
 
