@@ -48,7 +48,6 @@ function toggleMenus() {
 }
 
 
-
 const cButton = document.querySelector("#cButton");
 const cSound = new Audio("audio/cnote.mp3");
 const cSharpButton = document.querySelector("#cSharpButton");
@@ -61,6 +60,15 @@ const eButton = document.querySelector("#eButton");
 const eSound = new Audio("audio/piano-e_E_major.wav")
 const fButton = document.querySelector("#fButton");
 const fSound = new Audio("audio/piano-f.mp3");
+
+const playPerfectButton = document.querySelector("#playPerfect");
+const perfectCadenceSound = new Audio("audio/f-flat-major-perfect-cadence-V-I.mp3")
+const playImperfectButton = document.querySelector("#playImperfect");
+const imperfectCadenceSound = new Audio("audio/d-sharp-major-imperfect-cadence-I-V.mp3");
+const playInterruptedButton = document.querySelector("#playInterrupted");
+const interruptedCadenceSound = new Audio("audio/a-flat-major-interrupted-cadence-V7-vi.mp3");
+const playPlagalButton = document.querySelector("#playPlagal");
+const plagalCadenceSound = new Audio("audio/d-major-plagal-cadence-IV-I.mp3");
 
 
 function playCNote() {
@@ -82,12 +90,31 @@ function playFNote() {
     fSound.play();
 }
 
+function playPerfectCadence() {
+    perfectCadenceSound.play();
+}
+function playImperfectCadence() {
+    imperfectCadenceSound.play();
+}
+function playInterruptedCadence() {
+    interruptedCadenceSound.play();
+}
+function playPlagalCadence() {
+    plagalCadenceSound.play();
+}
+
 cButton.addEventListener("click", playCNote);
 cSharpButton.addEventListener("click", playCSharpNote);
 dButton.addEventListener("click", playDNote)
 dSharpButton.addEventListener("click", playDSharpNote);
 eButton.addEventListener("click", playENote);
 fButton.addEventListener("click", playFNote);
+
+playPerfectButton.addEventListener("click", playPerfectCadence);
+playImperfectButton.addEventListener("click", playImperfectCadence);
+playInterruptedButton.addEventListener("click", playInterruptedCadence);
+playPlagalButton.addEventListener("click", playPlagalCadence);
+
 
 
 const btnSubmit = document.querySelector("#btnSubmit");

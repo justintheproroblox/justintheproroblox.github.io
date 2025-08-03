@@ -121,7 +121,57 @@ nav ul li {
     background-color: #11085e;
     border: 5px solid #5949e9;
     font-family:Verdana, Tahoma, sans-serif;
-    height: 800px;
+    height: 1200px;
+}
+
+#playPerfect {
+    background-color: #ff00ff;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#playPerfect:hover {
+    background-color: #ff4dff;
+    color: black;
+}
+
+#playImperfect {
+    background-color: #ff00ff;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#playImperfect:hover {
+    background-color: #ff4dff;
+    color: black;
+}
+#playInterrupted {
+    background-color: #ff00ff;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#playInterrupted:hover {
+    background-color: #ff4dff;
+    color: black;
+}
+#playPlagal {
+    background-color: #ff00ff;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#playPlagal:hover {
+    background-color: #ff4dff;
+    color: black;
 }
 
 #page3 {
@@ -181,7 +231,7 @@ nav ul li {
     }
 
     #page2 {
-        height: 1200px;
+        height: 1700px;
     }
     #page3 {
         height: 1200px;
